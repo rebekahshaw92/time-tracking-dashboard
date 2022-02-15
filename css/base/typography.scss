@@ -1,0 +1,62 @@
+$font: 'Rubik', sans-serif;
+$paleBlue: rgb(189, 193, 255);
+$white: #fff;
+
+body {
+    font-family: $font;
+}
+
+.report {
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.name {
+    color: $white;
+    font-size: 22px;
+    font-weight: 100;
+    margin: 0;
+    //padding-top: 30px;
+}
+
+.weekly {
+    color: $white;
+}
+
+.daily, .weekly, .monthly {
+    color: $paleBlue;
+    font-weight: 100;
+}
+
+
+.work, .play, .study, .exercise, .social, .selfCare {
+    color: $white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#workTime, #playTime, #studyTime, #exerciseTime, #socialTime, #selfCareTime {
+    font-weight: 100;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 38px;
+    color: $white;
+}
+
+#workTimeLast, #playTimeLast, #studyTimeLast, #exerciseTimeLast, #socialTimeLast, #selfCareTimeLast {
+    padding-top: 25px; 
+    font-weight: 100;
+    color: $paleBlue;
+    font-size: 16px;
+    margin: 0.01rem;
+    @include media-breakpoint-up(lg){
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
+
+.active {
+    color: $white !important;
+}

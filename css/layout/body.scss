@@ -1,0 +1,142 @@
+$violet: hsl(264, 64%, 52%);
+$desaturatedBlue: hsl(235, 45%, 61%);
+$darkBlue: hsl(235, 46%, 20%);
+$veryDarkBlue: hsl(226, 43%, 10%);
+$paleBlue: rgb(189, 193, 255);
+$blue: hsl(246, 80%, 60%);
+$white: #fff;
+$softOrange: hsl(43, 84%, 65%);
+$lightOrange: hsl(15, 100%, 70%);
+$softBlue: hsl(195, 74%, 62%);
+$lightRed: hsl(348, 100%, 68%);
+$limeGreen: hsl(145, 58%, 55%);
+
+body {
+    background-color: $veryDarkBlue;
+}
+
+
+.wrapper {
+    padding: 80px 40px;
+    @include media-breakpoint-up(lg){
+        padding: 80px 100px;
+    }
+}
+
+
+.mainCard {
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 40px 20px;
+    background-color: $blue;
+    @include media-breakpoint-up(lg){
+        padding: 40px 30px;
+        margin-top: 100px;
+    }
+ }
+
+
+ .main {
+     background-color: $darkBlue;
+     border-radius: 20px;
+     @include media-breakpoint-up(lg){
+        height: 470px;
+     }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        padding-top: 20px;
+        font-size: 18px;
+        @include media-breakpoint-up(lg){
+            flex-direction: column;
+            gap: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: $paleBlue;
+          }
+        }
+ }
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 30px;
+    border: solid 2px $white;
+    border-radius: 40px;
+    @include media-breakpoint-up(lg){
+        margin-left: 0;
+    }
+}
+
+
+.workCard {
+    background-color: $lightOrange;
+}
+
+.playCard {
+    background-color: $softBlue;
+}
+
+.studyCard {
+    background-color: $lightRed;
+}
+
+.exerciseCard {
+    background-color: $limeGreen;
+}
+
+.socialCard {
+    background-color: $violet;
+}
+
+.selfCareCard {
+    background-color: $softOrange;
+}
+
+.workCard, .playCard, .studyCard, .exerciseCard, .socialCard, .selfCareCard { 
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    .icon {
+        background-repeat: no-repeat;
+        width: 80px;
+        position: absolute;
+        z-index: 1.5rem;
+        top: -5px;
+        right: 10px;
+    }
+    .inner-card {
+    z-index: 99; 
+    margin-top: 40px;
+    position: relative;
+    padding: 20px;
+    cursor: pointer;
+    background: $darkBlue;
+    border-radius: 20px;
+    &:hover {
+        background-color:lighten($darkBlue, 10%);
+    }
+    }
+}
+
+.ellipsis {
+    right: 20px;
+}
+
+.daily, .weekly, .monthly {
+    @include media-breakpoint-up(lg) {
+        margin-left: 20px;
+    }
+}
+
+.workCard, .playCard, .studyCard {
+    @include media-breakpoint-up(lg){
+    margin-top: 100px;
+    }
+}
+
+
